@@ -122,9 +122,6 @@
     overflow: hidden;
   }
 
-
-
-
   .hero-top {
     flex: 1;
     display: flex;
@@ -381,6 +378,101 @@
 
   .step p { font-size: 14px; color: var(--muted); line-height: 1.65; }
 
+  /* HIRE CALCULATOR */
+  .calc-section { background: var(--grey); padding: 80px 32px; }
+
+  .calc-section .section-inner { max-width: 700px; }
+
+  .hqh-card { background: var(--grey-dark); border-radius: 6px; padding: 24px; border: 1px solid rgba(255,255,255,0.08); }
+
+  .hqh-dates { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 20px; }
+
+  .hqh-field label {
+    display: block;
+    font-family: var(--font-display);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.5);
+    margin-bottom: 7px;
+  }
+
+  .hqh-date-wrap {
+    position: relative;
+    background: var(--grey);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 4px;
+    padding: 11px 40px 11px 13px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
+
+  .hqh-date-wrap:hover { border-color: rgba(255,255,255,0.35); }
+  .hqh-date-wrap:focus-within { border-color: var(--yellow); }
+
+  .hqh-date-display {
+    font-family: var(--font-body);
+    font-size: 14px;
+    color: var(--white);
+    white-space: nowrap;
+    overflow: hidden;
+    flex: 1;
+    pointer-events: none;
+  }
+
+  .hqh-date-icon {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgba(255,255,255,0.45);
+    font-size: 16px;
+    pointer-events: none;
+  }
+
+  .hqh-date-input {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+  }
+
+  .hqh-table { width: 100%; border-collapse: collapse; margin-bottom: 20px; border-radius: 4px; overflow: hidden; border: 1px solid rgba(255,255,255,0.08); }
+  .hqh-table thead tr { background: #2e3035; }
+  .hqh-table th { padding: 9px 14px; font-family: var(--font-display); font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; text-align: left; }
+  .hqh-table th:not(:first-child) { text-align: right; }
+  .hqh-table th.th-period { color: rgba(255,255,255,0.45); }
+  .hqh-table th.th-ex { color: rgba(255,255,255,0.45); }
+  .hqh-table th.th-inc { color: var(--yellow); }
+  .hqh-table td { padding: 11px 14px; color: var(--white); font-size: 14px; border-top: 1px solid rgba(255,255,255,0.06); }
+  .hqh-table td:not(:first-child) { text-align: right; }
+  .hqh-table tr:nth-child(even) { background: rgba(0,0,0,0.1); }
+
+  .hqh-estimate { display: none; background: #2e3035; border-radius: 0 4px 4px 0; padding: 18px 20px; margin-bottom: 18px; border-left: 4px solid var(--yellow); }
+  .hqh-estimate-lbl { font-family: var(--font-display); font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.45); margin-bottom: 8px; }
+  .hqh-estimate-vals { display: flex; align-items: baseline; gap: 20px; flex-wrap: wrap; }
+  .hqh-ex-val span:first-child { display: block; font-size: 12px; color: rgba(255,255,255,0.45); margin-bottom: 2px; }
+  .hqh-ex-val strong { font-size: 22px; font-weight: 700; color: var(--white); }
+  .hqh-inc-val span:first-child { display: block; font-size: 12px; color: rgba(255,255,255,0.45); margin-bottom: 2px; }
+  .hqh-inc-val strong { font-size: 32px; font-weight: 700; color: var(--yellow); }
+  .hqh-period { font-size: 13px; color: rgba(255,255,255,0.45); margin-top: 6px; }
+
+  .hqh-btn { display: none; width: 100%; background: var(--red); color: var(--white); border: none; border-radius: 4px; padding: 15px; font-family: var(--font-display); font-size: 18px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; cursor: pointer; transition: background 0.15s; }
+  .hqh-btn:hover { background: var(--red-dark); }
+
+  .hqh-confirm { display: none; text-align: center; padding: 4px 0; }
+  .hqh-confirm p { font-family: var(--font-body); font-size: 14px; color: rgba(255,255,255,0.8); margin: 0 0 14px; }
+  .hqh-call-link { display: inline-block; background: var(--red); color: var(--white); text-decoration: none; border-radius: 4px; padding: 13px 28px; font-family: var(--font-display); font-size: 20px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; }
+  .hqh-call-link:hover { background: var(--red-dark); }
+  .hqh-hours { font-size: 12px; color: rgba(255,255,255,0.35); margin: 10px 0 0; }
+
+  .hqh-note { font-size: 12px; color: rgba(255,255,255,0.55); text-align: center; margin-top: 14px; }
+  .hqh-error { display: none; font-size: 13px; color: #f09595; margin-top: 8px; }
+
   /* COVERAGE */
   .coverage-section { background: var(--grey-dark); }
 
@@ -575,6 +667,7 @@
     .trust-bar { padding: 16px; }
     .bottom-cta { padding: 60px 16px; }
     footer { padding: 28px 16px; }
+    .hqh-dates { grid-template-columns: 1fr 1fr; gap: 10px; }
   }
 </style>
 </head>
@@ -649,8 +742,6 @@
     </div>
   </div>
 </div>
-
-
 
 <!-- CAROUSEL -->
 <section class="carousel-section">
@@ -752,6 +843,203 @@
   </div>
 </section>
 
+<!-- ============================================================
+     HIRE CALCULATOR
+     RATE CARD — UPDATE THESE 4 VALUES WHEN CLIENT PROVIDES RATES
+     All values in pence (e.g. £182.27 = 18227)
+     d1  = First 24hrs
+     dn  = Each next 24hrs
+     we  = Weekend
+     wk  = Week
+     ============================================================ -->
+<section class="calc-section">
+  <div class="section-inner">
+    <p class="section-label">Get An Estimate</p>
+    <h2>How Much <span>Will It Cost?</span></h2>
+
+    <div class="hqh-card">
+      <div class="hqh-dates">
+        <div class="hqh-field">
+          <label>Start Date</label>
+          <div class="hqh-date-wrap" onclick="document.getElementById('hqh-start').showPicker()">
+            <div id="hqh-disp-start" class="hqh-date-display"></div>
+            <span class="hqh-date-icon">📅</span>
+            <input type="date" id="hqh-start" class="hqh-date-input" />
+          </div>
+        </div>
+        <div class="hqh-field">
+          <label>End Date</label>
+          <div class="hqh-date-wrap" onclick="document.getElementById('hqh-end').showPicker()">
+            <div id="hqh-disp-end" class="hqh-date-display"></div>
+            <span class="hqh-date-icon">📅</span>
+            <input type="date" id="hqh-end" class="hqh-date-input" />
+          </div>
+        </div>
+      </div>
+      <div id="hqh-error" class="hqh-error">End date must be after start date.</div>
+
+      <table class="hqh-table">
+        <thead>
+          <tr>
+            <th class="th-period">Hire Period</th>
+            <th class="th-ex">Ex VAT</th>
+            <th class="th-inc">Inc VAT</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>First 24hrs</td><td id="hqh-r-d1-ex">—</td><td id="hqh-r-d1-inc"><strong>—</strong></td></tr>
+          <tr><td>Next 24hrs</td><td id="hqh-r-dn-ex">—</td><td id="hqh-r-dn-inc"><strong>—</strong></td></tr>
+          <tr><td>Weekend</td><td id="hqh-r-we-ex">—</td><td id="hqh-r-we-inc"><strong>—</strong></td></tr>
+          <tr><td>Week</td><td id="hqh-r-wk-ex">—</td><td id="hqh-r-wk-inc"><strong>—</strong></td></tr>
+        </tbody>
+      </table>
+
+      <div id="hqh-estimate" class="hqh-estimate">
+        <div class="hqh-estimate-lbl">Estimated Cost</div>
+        <div class="hqh-estimate-vals">
+          <div class="hqh-ex-val">
+            <span>Ex VAT</span>
+            <strong id="hqh-ex">£0.00</strong>
+          </div>
+          <div class="hqh-inc-val">
+            <span>Inc VAT</span>
+            <strong id="hqh-inc">£0.00</strong>
+          </div>
+        </div>
+        <div id="hqh-period" class="hqh-period"></div>
+      </div>
+
+      <button id="hqh-btn" class="hqh-btn" onclick="hqhEnquire()">Call to Book — 07792 324526</button>
+
+      <div id="hqh-confirm" class="hqh-confirm">
+        <p>Great — call us now to confirm your booking. We'll hold the machine for you.</p>
+        <a href="tel:+447792324526" class="hqh-call-link" onclick="trackCall()">📞 07792 324526</a>
+        <p class="hqh-hours">Mon–Fri 7am–6pm &nbsp;·&nbsp; Sat 8am–1pm</p>
+      </div>
+    </div>
+
+    <p class="hqh-note">Estimates based on standard hire rates. Final price confirmed on booking. Delivery charge not included above.</p>
+  </div>
+</section>
+
+<script>
+  // ============================================================
+  // RATE CARD — UPDATE THESE 4 VALUES WHEN CLIENT PROVIDES RATES
+  // ============================================================
+  const HQH_RATES = {
+    d1: { ex: 00000, inc: 00000 },  // First 24hrs
+    dn: { ex: 00000, inc: 00000 },  // Next 24hrs
+    we: { ex: 00000, inc: 00000 },  // Weekend
+    wk: { ex: 00000, inc: 00000 },  // Week
+  };
+  // Example when client provides rates:
+  // d1: { ex: 18227, inc: 21872 },
+  // dn: { ex:  9113, inc: 10936 },
+  // we: { ex: 25517, inc: 30620 },
+  // wk: { ex: 36453, inc: 43744 },
+
+  const HQH_DAYS   = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+  const HQH_MONTHS = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+
+  function hqhFmt(p) { return p ? '£' + (p / 100).toFixed(2) : '—'; }
+  function hqhToISO(d) { return d.toISOString().split('T')[0]; }
+  function hqhFmtDisplay(iso) {
+    if (!iso) return '';
+    const [y, m, day] = iso.split('-').map(Number);
+    const d = new Date(y, m - 1, day);
+    return HQH_DAYS[d.getDay()] + ' ' + day + ' ' + HQH_MONTHS[m - 1];
+  }
+  function hqhSetDisplay(id, iso) { document.getElementById(id).textContent = hqhFmtDisplay(iso); }
+
+  function hqhFillTable() {
+    document.getElementById('hqh-r-d1-ex').textContent = hqhFmt(HQH_RATES.d1.ex);
+    document.getElementById('hqh-r-d1-inc').innerHTML  = '<strong>' + hqhFmt(HQH_RATES.d1.inc) + '</strong>';
+    document.getElementById('hqh-r-dn-ex').textContent = hqhFmt(HQH_RATES.dn.ex);
+    document.getElementById('hqh-r-dn-inc').innerHTML  = '<strong>' + hqhFmt(HQH_RATES.dn.inc) + '</strong>';
+    document.getElementById('hqh-r-we-ex').textContent = hqhFmt(HQH_RATES.we.ex);
+    document.getElementById('hqh-r-we-inc').innerHTML  = '<strong>' + hqhFmt(HQH_RATES.we.inc) + '</strong>';
+    document.getElementById('hqh-r-wk-ex').textContent = hqhFmt(HQH_RATES.wk.ex);
+    document.getElementById('hqh-r-wk-inc').innerHTML  = '<strong>' + hqhFmt(HQH_RATES.wk.inc) + '</strong>';
+  }
+
+  function hqhCalc() {
+    const sv  = document.getElementById('hqh-start').value;
+    const ev  = document.getElementById('hqh-end').value;
+    const eb  = document.getElementById('hqh-estimate');
+    const btn = document.getElementById('hqh-btn');
+    const err = document.getElementById('hqh-error');
+    err.style.display = 'none';
+    if (!sv || !ev) { eb.style.display = 'none'; btn.style.display = 'none'; return; }
+    const s = new Date(sv), e = new Date(ev);
+    if (e <= s) { err.style.display = 'block'; eb.style.display = 'none'; btn.style.display = 'none'; return; }
+    const days = Math.round((e - s) / 86400000);
+    let exT = 0, incT = 0, label = '';
+    const sd = s.getDay();
+    if (days >= 7) {
+      const wks = Math.floor(days / 7), rem = days % 7;
+      exT  = wks * HQH_RATES.wk.ex  + (rem > 0 ? HQH_RATES.d1.ex  + Math.max(0, rem - 1) * HQH_RATES.dn.ex  : 0);
+      incT = wks * HQH_RATES.wk.inc + (rem > 0 ? HQH_RATES.d1.inc + Math.max(0, rem - 1) * HQH_RATES.dn.inc : 0);
+      label = wks === 1 && rem === 0 ? '1 week hire' : wks + ' week' + (wks > 1 ? 's' : '') + (rem > 0 ? ' + ' + rem + ' day' + (rem > 1 ? 's' : '') : '');
+    } else if (days === 2 && (sd === 5 || sd === 6 || sd === 0)) {
+      exT = HQH_RATES.we.ex; incT = HQH_RATES.we.inc; label = 'Weekend hire';
+    } else if (days === 1) {
+      exT = HQH_RATES.d1.ex; incT = HQH_RATES.d1.inc; label = 'First 24hrs';
+    } else {
+      exT  = HQH_RATES.d1.ex  + (days - 1) * HQH_RATES.dn.ex;
+      incT = HQH_RATES.d1.inc + (days - 1) * HQH_RATES.dn.inc;
+      label = days + ' day hire';
+    }
+    document.getElementById('hqh-ex').textContent     = hqhFmt(exT);
+    document.getElementById('hqh-inc').textContent    = hqhFmt(incT);
+    document.getElementById('hqh-period').textContent = label;
+    eb.style.display = 'block'; btn.style.display = 'block';
+    document.getElementById('hqh-confirm').style.display = 'none';
+  }
+
+  function hqhEnquire() {
+    document.getElementById('hqh-btn').style.display     = 'none';
+    document.getElementById('hqh-confirm').style.display = 'block';
+    if (typeof trackCall === 'function') trackCall();
+  }
+
+  const hqhToday    = new Date();
+  const hqhTomorrow = new Date(hqhToday); hqhTomorrow.setDate(hqhToday.getDate() + 1);
+  const hqhTodayISO    = hqhToISO(hqhToday);
+  const hqhTomorrowISO = hqhToISO(hqhTomorrow);
+
+  const hqhStartEl = document.getElementById('hqh-start');
+  const hqhEndEl   = document.getElementById('hqh-end');
+
+  hqhStartEl.min   = hqhTodayISO;
+  hqhEndEl.min     = hqhTomorrowISO;
+  hqhStartEl.value = hqhTodayISO;
+  hqhEndEl.value   = hqhTomorrowISO;
+
+  hqhSetDisplay('hqh-disp-start', hqhTodayISO);
+  hqhSetDisplay('hqh-disp-end',   hqhTomorrowISO);
+
+  hqhStartEl.addEventListener('change', function () {
+    hqhSetDisplay('hqh-disp-start', this.value);
+    const next = new Date(this.value); next.setDate(next.getDate() + 1);
+    const nextISO = hqhToISO(next);
+    hqhEndEl.min = nextISO;
+    if (!hqhEndEl.value || hqhEndEl.value <= this.value) {
+      hqhEndEl.value = nextISO;
+      hqhSetDisplay('hqh-disp-end', nextISO);
+    }
+    hqhCalc();
+  });
+
+  hqhEndEl.addEventListener('change', function () {
+    hqhSetDisplay('hqh-disp-end', this.value);
+    hqhCalc();
+  });
+
+  hqhFillTable();
+  hqhCalc();
+</script>
+<!-- END HIRE CALCULATOR -->
+
 <!-- COVERAGE -->
 <section class="coverage-section">
   <div class="section-inner">
@@ -803,7 +1091,7 @@
     primaryColor: "#F97316"
   };
 </script>
-<script src="https://askkessel.com/kessel-embed.js"></script>  
-  
+<script src="https://askkessel.com/kessel-embed.js"></script>
+
 </body>
 </html>
