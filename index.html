@@ -847,10 +847,10 @@
      HIRE CALCULATOR
      RATE CARD — UPDATE THESE 4 VALUES WHEN CLIENT PROVIDES RATES
      All values in pence (e.g. £182.27 = 18227)
-     d1  = First 24hrs
-     dn  = Each next 24hrs
-     we  = Weekend
-     wk  = Week
+     d1: { ex: 15000, inc: 18000 },  // First 24hrs
+     dn: { ex:  7500, inc:  9000 },  // Next 24hrs
+     we: { ex: 21000, inc: 25200 },  // Weekend
+     wk: { ex: 36000, inc: 43200 },  // Week
      ============================================================ -->
 <section class="calc-section">
   <div class="section-inner">
