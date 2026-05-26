@@ -130,20 +130,20 @@
     z-index: 1;
   }
 
-  .hero-digger {
-    display: flex;
-    justify-content: center;
-    position: relative;
-    z-index: 2;
-    margin-bottom: -71px;
-  }
+  .hero-content { flex: 1; }
+
+.hero-digger {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
 
   .hero-digger img {
-    width: 280px;
-    height: auto;
-    display: block;
-  }
-
+  width: 100%;
+  max-width: 520px;
+  border-radius: 6px;
+  display: block;
+}
   .hero-bottom {
     background: var(--grey);
     padding: 36px 32px;
@@ -154,11 +154,15 @@
     text-align: center;
   }
 
-  .hero-inner {
-    max-width: 700px;
-    position: relative;
-    z-index: 1;
-  }
+ .hero-inner {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+  width: 100%;
+  max-width: 1100px;
+  position: relative;
+  z-index: 1;
+}
 
   .hero-badge {
     display: inline-flex;
@@ -656,8 +660,10 @@
   .dot.active { background: var(--red); }
 
   /* MOBILE */
-  @media (max-width: 640px) {.hero-digger img {max-height: 200px; width: 100%; object-fit: cover; }
-                             .hero-digger { margin-bottom: 40px; }
+  @media (max-width: 640px) {
+    .hero-inner { flex-direction: column; }
+    .hero-digger { width: 100%; }
+    .hero-digger img { max-height: 280px; width: 100%; object-fit: cover; }
     nav { padding: 0 16px; }
     .nav-label { display: none; }
     .nav-call { font-size: 15px; padding: 8px 14px; }
@@ -691,7 +697,8 @@
 <section class="hero">
   <div class="hero-top">
     <div class="hero-inner">
-  <div class="hero-badge">Hampshire Plant Hire</div>
+      <div class="hero-content">
+  <div class="hero-badge">Hampshire Quality Hire</div>
   <h1>
     <span style="color: var(--yellow);">Mini Digger Hire Across Hampshire</span>
   </h1>
@@ -700,9 +707,15 @@
     Same-day delivery. Fully insured. No hidden fees. Deal directly with the owner. Operators available for jobs that need it.
   </p>
 </div>
-    </div>
   <div class="hero-digger">
+    <picture>
+      <source media="(max-width: 640px)" srcset="Mini_Digger_Side_on.jpg">
+          <img src="Digger_Photo.jpg" alt="Hampshire Quality Plant Hire">
+    </picture>
     <img src="Mini_Digger_Side_on.jpg" alt="Hampshire Quality Plant Hire">
+  </picture>
+  </div>
+    </div>
   </div>
   <div class="hero-bottom">
     <a class="cta-primary" href="tel:+447792324526" onclick="trackCall()">
