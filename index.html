@@ -183,7 +183,7 @@
   h1 {
     font-family: var(--font-display);
     font-weight: 900;
-    font-size: clamp(46px, 10vw, 96px);
+    font-size: clamp(46px, 10vw, 84px);
     line-height: 0.92;
     letter-spacing: -0.01em;
     text-transform: uppercase;
@@ -659,6 +659,12 @@
 
   .dot.active { background: var(--red); }
 
+/* TABLET/LAPTOP — hero stacks until there's room for two columns */
+  @media (max-width: 1160px) {
+    .hero-inner { flex-direction: column; }
+    .hero-digger { width: 100%; }
+  }
+  
   /* MOBILE */
   @media (max-width: 640px) {
     .hero-inner { flex-direction: column; gap: 10px; }
